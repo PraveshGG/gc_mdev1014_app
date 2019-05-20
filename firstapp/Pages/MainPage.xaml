@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:firstapp" x:Class="firstapp.MainPage">
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="dicon.png" />
+        <StackLayout Grid.Row="1">
+            <!-- Place new controls here -->
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout Grid.Row="2" VerticalOptions="Center">
+            <BoxView HeightRequest="2" BackgroundColor="Silver" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Sign In" BackgroundColor="Maroon" TextColor="White" Padding="10" Clicked="Handle_Clicked" />
+                <Button Text="Sign Up" BackgroundColor="Maroon" TextColor="White" Padding="10"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
