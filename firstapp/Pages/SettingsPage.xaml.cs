@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace firstapp
 {
-    public partial class SettingsPage : ContentPage
+    public partial class SettingsPage : BasePage
     {
         public SettingsPage()
         {
@@ -14,8 +14,7 @@ namespace firstapp
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
-            var myApp = Application.Current as App;
-            myApp.OnLogout();
+            MyApp.OnLogout();
         }
     }
 }
