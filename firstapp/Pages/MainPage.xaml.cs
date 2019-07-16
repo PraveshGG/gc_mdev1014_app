@@ -22,5 +22,10 @@ namespace firstapp
             var newPage = new NavigationPage(new LoginPage());
             Navigation.PushAsync(newPage);
         }
+
+        void Handle_Clicked_1(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new RegisterPage());
+        }
     }
 }

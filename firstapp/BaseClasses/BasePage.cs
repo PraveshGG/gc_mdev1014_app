@@ -24,6 +24,10 @@ namespace firstapp
             {
                 BindingContext = new LoginPageVM();
             }
+            else if(this.GetType() == typeof(RegisterPage))
+            {
+                BindingContext = new RegisterPageVM();
+            }
 
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using firstapp.ENUMS;
 using firstapp.Models;
@@ -7,32 +8,32 @@ using Xamarin.Forms;
 
 namespace firstapp.ViewModels
 {
-    public class LoginPageVM
+    public class RegisterPageVM
     {
-        public string PH_Title { get; set; }
-        public string Username { get; set; }
+        public ICommand SignUpCommand => new Command(SignUpClicked);
+        public string UserName { get; set; }
         public string Password { get; set; }
 
-        public ICommand SigninCommand => new Command(SignInClicked);
-
         private ServerConnect serviceConnect => new ServerConnect();
-        public LoginPageVM()
+
+        public RegisterPageVM()
         {
-            PH_Title = "Login Page";
         }
 
-        async public void SignInClicked()
+        async  void SignUpClicked()
         {
-            Debug.WriteLine($"check against username:{Username}, password:{Password}");
+            Debug.WriteLine($"am sign up clicked: username:{UserName}, password:{Password}");
             var _user = new UserAuthInfoObject
             {
-                Email = Username,
+                Email = UserName,
                 Password = Password,
-                AuthType = AuthType.SignIn,
+                AuthType = AuthType.SignUp,
             };
 
             var result = await serviceConnect.Connect(_user);
 
         }
+
+
     }
 }

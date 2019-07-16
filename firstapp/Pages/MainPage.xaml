@@ -21,7 +21,7 @@
             <BoxView HeightRequest="2" BackgroundColor="Silver" />
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Button Text="Sign In" BackgroundColor="Maroon" TextColor="White" Padding="10" Clicked="Handle_Clicked" />
-                <Button Text="Sign Up" BackgroundColor="Maroon" TextColor="White" Padding="10"/>
+                <Button Text="Sign Up" BackgroundColor="Maroon" TextColor="White" Padding="10" Clicked="Handle_Clicked_1"/>
             </StackLayout>
         </StackLayout>
     </Grid>
