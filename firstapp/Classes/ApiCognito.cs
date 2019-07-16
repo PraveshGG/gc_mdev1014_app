@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+Install those NuGet packages one by one on each platform
+
+AWSSDK.CognitoIdentityProvider
+AWSSDK.Core
+AWSSDK.SecurityToken
+AWSSDK.Extensions.CognitoAuthentication
+
+*/
+
+
+
+using System;
 //using SyBrass.Tools.Diagnostics;
 using System.Windows.Input;
 using Amazon;
