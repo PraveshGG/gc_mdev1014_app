@@ -8,19 +8,13 @@ AWSSDK.Extensions.CognitoAuthentication
 
 */
 
-
-
 using System;
-//using SyBrass.Tools.Diagnostics;
-using System.Windows.Input;
 using Amazon;
 using Amazon.CognitoIdentityProvider;
 using Amazon.CognitoIdentityProvider.Model;
 using Amazon.Extensions.CognitoAuthentication;
 using Amazon.Runtime;
-using Xamarin.Forms;
 using System.Threading.Tasks;
-using Amazon.CognitoIdentity;
 using System.Diagnostics;
 using firstapp.ENUMS;
 

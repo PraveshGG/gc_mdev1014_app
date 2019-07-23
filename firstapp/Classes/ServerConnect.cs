@@ -19,11 +19,10 @@ namespace firstapp
 
             var responseCognito = new CognitoContext();
             var funcReply = ServerReplyStatus.Unknown;
-            var connectType = _connectInfo.AuthType;
             string user;
             string pass;
 
-            switch (connectType)
+            switch (_connectInfo.AuthType)
             {
                 case AuthType.SignUp:
                     user = _connectInfo.Email.Trim().ToLower();
@@ -64,7 +63,9 @@ namespace firstapp
                 case AuthType.SignIn:
                     user = _connectInfo.Email.Trim().ToLower();
                     pass = _connectInfo.Password.Trim();
+
                     responseCognito = await AuthApi.SignIn(user, pass);
+
                     Debug.WriteLine($" Reply from aws Auth: {responseCognito.Result} ");
                     switch (responseCognito.Result)
                     {

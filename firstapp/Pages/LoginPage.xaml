@@ -14,6 +14,7 @@
             <StackLayout Grid.Row="2" Padding="20">
                 <Button Text="Sign In" BackgroundColor="Maroon" TextColor="White" Padding="10" Command="{Binding SigninCommand}" />
             </StackLayout>
+            <ActivityIndicator IsEnabled="true"/>
         </Grid>
     </ContentPage.Content>
 </local:BasePage>

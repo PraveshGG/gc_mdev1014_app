@@ -32,6 +32,7 @@ namespace firstapp.ViewModels
 
             var result = await serviceConnect.Connect(_user);
 
+
         }
 
 
